@@ -11,7 +11,7 @@ from savedex import schema_venum
 
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 # Setup env variables
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "OPENAI_API_KEY ")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "OPENAI_API_KEY")
 
 # schema_details
 schema_details = schema_venum()
