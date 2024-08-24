@@ -67,7 +67,7 @@ def new_chat():
     st.session_state.entity_memory.buffer.clear()
 
 # Create an OpenAI instance
-llm = LangchainOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY, model="gpt-4", verbose=False)
+llm = LangchainOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY, model="gpt-3.5-turbo-instruct", verbose=False)
 
 if "entity_memory" not in st.session_state:
     st.session_state.entity_memory = ConversationEntityMemory(llm=llm)
