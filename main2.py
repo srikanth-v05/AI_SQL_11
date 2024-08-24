@@ -4,6 +4,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationEntityMemory
+from langchain.llm as ChatOpenai
 from langchain_openai import OpenAI as LangchainOpenAI
 from sql_execution import execute_mysql_query  # Import the execute_mysql_query function
 from trialprompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE1
@@ -67,7 +68,7 @@ def new_chat():
     st.session_state.entity_memory.buffer.clear()
 
 # Create an OpenAI instance
-llm = LangchainOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY, model="gpt-3.5-turbo-instruct", verbose=False)
+llm = ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY, model="gpt-4", verbose=False)
 
 if "entity_memory" not in st.session_state:
     st.session_state.entity_memory = ConversationEntityMemory(llm=llm)
