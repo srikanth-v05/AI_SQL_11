@@ -4,7 +4,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationEntityMemory
-from langchain.llm import ChatOpenai
+from langchain.llms import ChatOpenai
 from langchain_openai import OpenAI as LangchainOpenAI
 from sql_execution import execute_mysql_query  # Import the execute_mysql_query function
 from trialprompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE1
