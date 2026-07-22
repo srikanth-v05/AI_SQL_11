@@ -61,7 +61,7 @@ orjson==3.10.6
 packaging==24.1
 pandas==1.5.3
 pandasai==2.2.12
-pillow==10.4.0
+pillow==12.3.0
 platformdirs==4.2.2
 
 pyarrow==17.0.0
